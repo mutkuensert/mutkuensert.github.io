@@ -11,7 +11,7 @@ This blog is where I document the things I learn architecture patterns, testing 
 If you’re interested in thoughtful engineering, modern Android development and practical, real-world insights, you’ll find something valuable here.
 
 Some of my side projects I’ve worked on include:
-* An [Android app]((https://github.com/mutkuensert/AndroidSignatureExample)) that generates cryptographic key pairs inside a trusted execution environment and signs data using biometric authentication
+* An [Android app](https://github.com/mutkuensert/AndroidSignatureExample) that generates cryptographic key pairs inside a trusted execution environment and signs data using biometric authentication
 
 * An [ESP32-based air quality monitor](https://github.com/mutkuensert/Arduino-air-quality-monitor-esp32) using particle sensors
 
