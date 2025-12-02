@@ -15,4 +15,4 @@ Some of my side projects I’ve worked on include:
 
 * An [ESP32-based air quality monitor](https://github.com/mutkuensert/Arduino-air-quality-monitor-esp32) using particle sensors
 
-* A multi module [The Movie Database](https://www.themoviedb.org/) Android [client](https://github.com/mutkuensert/MovieDb-Light) showcasing Room relation entities, cached pagination, migrations and precompiled script plugins
+* A multi module Android [client](https://github.com/mutkuensert/MovieDb-Light) for [The Movie Database](https://www.themoviedb.org/) showcasing Room relation entities, cached pagination, migrations and precompiled script plugins
