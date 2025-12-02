@@ -4,15 +4,15 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I’m a software developer focused primarily on Android with a strong interest in clean architecture, elegant code, and building maintainable applications. I enjoy exploring how structured design, testing practices, and sustainable engineering principles can make software enjoyable to work on.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+This blog is where I document the things I learn architecture patterns, testing strategies, Android techniques, and insights from hands-on experiments in various areas of software and electronics.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+If you’re interested in thoughtful engineering, modern Android development and practical, real-world insights, you’ll find something valuable here.
 
+Some of my side projects I’ve worked on include:
+* An [Android app]((https://github.com/mutkuensert/AndroidSignatureExample)) that generates cryptographic key pairs inside a trusted execution environment and signs data using biometric authentication
 
-[jekyll-organization]: https://github.com/jekyll
+* An [ESP32-based air quality monitor](https://github.com/mutkuensert/Arduino-air-quality-monitor-esp32) using particle sensors
+
+* A multi module [The Movie Database](https://www.themoviedb.org/) Android [client](https://github.com/mutkuensert/MovieDb-Light) showcasing Room relation entities, cached pagination, migrations and precompiled script plugins
