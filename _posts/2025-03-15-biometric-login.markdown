@@ -2,7 +2,7 @@
 layout: post
 title:  "Secure Biometric Login: From Android Client to Backend"
 date:   2025-03-15 20:00:00 +0300
-categories: jekyll update
+categories: android
 ---
 Biometric login provides users with a convenient way to sign in to their accounts. In this article, I’ll explain how to verify a signature for user authorization using a public key to determine whether it was signed by the correct private key, which can only be used if the user authenticates using biometrics.
 

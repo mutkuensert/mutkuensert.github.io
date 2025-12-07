@@ -2,7 +2,7 @@
 layout: post
 title:  "Behavior testing using Mockk"
 date:   2024-12-13 20:00:00 +0300
-categories: jekyll update
+categories: android
 ---
 Here I’m going to explain how to test behavior of a class through a unit test using [Mockk library](https://mockk.io/) on a very simple example.
 
