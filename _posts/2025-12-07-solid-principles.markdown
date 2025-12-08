@@ -2,7 +2,7 @@
 layout: post
 title:  "Solid principles"
 date:   2025-03-15 20:00:00 +0300
-categories: android
+categories: architecture
 ---
 ## The Single Responsibility Principle
 A module should be responsible to one, and only one, actor, Uncle Bob says.
