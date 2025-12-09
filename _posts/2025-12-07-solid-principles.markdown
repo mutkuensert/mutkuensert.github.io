@@ -17,7 +17,7 @@ classDiagram
     Logger: +log(message)
 ```
 
-Let's say if the program is in debug mode we want to print the message, or if the program is in release mode we don't want to print the message but we want to send the message to a service. If we put a flag parameter called **isDebug** for example, what will happen if we also want different behavior for different variants like **testDebug, testRelease, productionDebug** etc. The right way to prevent the complexity is facade pattern:
+Let's say if the program is in debug mode we want to print the message, or if the program is in release mode we don't want to print the message but we want to send the message to a service. If we put a flag parameter called **isDebug** in **log** method for example, what will happen if we also want different behavior for different variants like **testDebug, testRelease, productionDebug** etc. The right way to prevent the complexity is:
 
 ```mermaid
 classDiagram
@@ -25,9 +25,9 @@ classDiagram
     <<interface>> Logger
     Logger: +log(message)
 
-    class LoggerFacade
-    LoggerFacade: -Logger logger
-    LoggerFacade --> Logger
+    class Foo
+    Foo: -Logger logger
+    Foo --> Logger
 
     class DebugLogger
     DebugLogger --|> Logger
@@ -35,7 +35,7 @@ classDiagram
     class ReleaseLogger
     ReleaseLogger --|> Logger
 ```
-This way, we created different implementations(DebugLogger, ReleaseLogger) for different actors(debug mode, release mode).
+Class Foo uses Logger interface. This way, we created different implementations(DebugLogger, ReleaseLogger) for different actors(debug mode, release mode).
 
 ## The Open-Closed Principle
 *"A software artifact should be open for extension but closed for modification."*
