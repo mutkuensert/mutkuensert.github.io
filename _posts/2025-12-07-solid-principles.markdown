@@ -10,7 +10,7 @@ A module should be responsible to one, and only one, actor, Uncle Bob says.
 
 Suppose we use a class in two different features or screens etc. and the implementation of a method has to be different in these features. A quick fix that violates this principle and may cause big troubles in time is adding a flag parameter in the method and using it in **two different actors**.
 
-One of the suggestions of Uncle Bob is facade patern. Suppose we have a class called **Logger**.
+Suppose we have a class called **Logger**.
 ```mermaid
 classDiagram
     class Logger
