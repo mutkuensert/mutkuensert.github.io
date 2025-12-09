@@ -16,6 +16,7 @@ classDiagram
     class Logger
     Logger: +log(message)
 ```
+**To see what these diagrams tell [click here](https://mutkuensert.github.io/pages/class-diagrams-with-mermaid.html).**
 
 Let's say if the program is in debug mode we want to print the message, or if the program is in release mode we don't want to print the message but we want to send the message to a service. If we put a flag parameter called **isDebug** in **log** method for example, what will happen if we also want different behavior for different variants like **testDebug, testRelease, productionDebug** etc. The right way to prevent the complexity is:
 
@@ -160,4 +161,4 @@ classDiagram
     A --> C
     B --|> C
 ```
-This way, B now implements C interface and A uses C and doesn't depend on implementation details(B) anymore.
+This way, B now implements C interface. A uses C and doesn't depend on implementation details(B) anymore.
