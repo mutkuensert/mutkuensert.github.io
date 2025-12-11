@@ -2,7 +2,7 @@
 layout: post
 title:  "Solid principles"
 description: "Explanation of solid with simple examples"
-date:   2025-03-15 20:00:00 +0300
+date:   2025-12-08 20:00:00 +0300
 categories: architecture
 ---
 ## The Single Responsibility Principle
