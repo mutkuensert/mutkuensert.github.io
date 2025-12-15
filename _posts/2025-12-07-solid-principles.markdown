@@ -111,7 +111,7 @@ classDiagram
     FeatureA --> ImageEditor
     FeatureB --> ImageEditor
 ```
-Suppose we use an image processing library and created an ImageEditor class using the library. We use this class in more than one place in our program. In new versions of this library, changes in the internals will cause recompiling of the modules that depend on our class. To fix it:
+Suppose we use an image processing library and created an ImageEditor class using the library. We use this class in more than one place in our program. Changes in the new versions of the library will cause recompiling of the modules that depend on our class. To fix it:
 
 ```mermaid
 classDiagram
