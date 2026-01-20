@@ -16,16 +16,38 @@ Basically, a signer encrypts a data using private key and a verifier decrypts th
 ## Signing process
 The data that is going to be signed is hashed at first. Then, the hashed output is encrypted using private key.
 
-<div align="center">
-    <img src="../../../../../docs/biometric%20article/signing_process.webp" width="200">
-</div>
+```mermaid
+flowchart TD
+    Data@{ shape: lean-r, label: "Data" }
+    Hashing@{ shape: rect, label: "Hashing (Sha256 etc.)" }
+    MessageDigest@{ shape: lean-r, label: "Message Digest (Hashed Data)" }
+    Encryption@{ shape: rect, label: "Encryption using private key (ECDSA, RSA, etc.)" }
+
+    Data --> Hashing --> MessageDigest --> Encryption
+```
 
 ## Verification process
 Received signature is decrypted using public key and the result is compared with hashed original data.
 
-<div align="center">
- <img src="../../../../../docs/biometric%20article/verification_process.webp" width="400"/>
-</div>
+```mermaid
+flowchart TD
+    Signature@{ shape: lean-r, label: "Signature" }
+    Decryption@{ shape: rect, label: "Decryption using private key (ECDSA, RSA, etc.)" }
+    MessageDigest@{ shape: lean-r, label: "Hashed Data" }
+    Comparison@{ shape: rect, label: "Comparing with original hashed data" }
+    Equals@{ shape: diamond, label: "Equals?" }
+    Verified@{ shape: stadium, label: "Verified" }
+    NotVerified@{ shape: stadium, label: "Not Verified" }
+
+    OriginalData@{ shape: lean-r, label: "Original Data" }
+    HashingOriginal@{ shape: rect, label: "Hashing (Sha256 etc.)" }
+    OriginalMessageDigest@{ shape: lean-r, label: "Message Digest (Original Hashed Data)" }
+
+    Signature --> Decryption --> MessageDigest --> Comparison --> Equals
+    OriginalData --> HashingOriginal --> OriginalMessageDigest --> Comparison
+    Equals -- true --> Verified
+    Equals -- false --> NotVerified
+```
 
 ## Algorithms
 I used ECDSA in this article but there are other signature algorithms like; DSA, RSA, ECDSA and EdDSA. DSA is not approved anymore.
@@ -34,9 +56,41 @@ OWASP [recommends](https://github.com/OWASP/owasp-mastg/blob/master/Document/0x0
 ## Biometric Login
 The biometric login flow I will explain relies on public-key cryptography. Here is how the login flow works basically.
 
-<div align="center">
- <img src="../../../../../docs/biometric%20article/biometric_login_flow.webp" width="600"/>
-</div>
+```mermaid
+flowchart TD
+    StartLoginFlow@{ shape: rect, label: "User starts login flow" }
+    UsesBiometricLogin@{ shape: diamond, label: "Device has strong biometric enrolled & User enabled biometric login feature" }
+    RedirectToPasswordLogin@{ shape: rect, label: "Redirect to password login screen" }
+    RequestChallenge@{ shape: rect, label: "Request challenge from backend" }
+    Challenge@{ shape: lean-r, label: "One time challenge" }
+    Scan@{ shape: rect, label: "User scans finger" }
+    SuccessScan@{ shape: diamond, label: "Success scan?" }
+    Sign@{ shape: rect, label: "Challenge is signed using private key" }
+    SuccessSign@{ shape: diamond, label: "Success sign?" }
+    DeletePrivate@{ shape: rect, label: "Delete private key entry" }
+    SendBiometricLoginRequest@{ shape: rect, label: "Send biometric login request" }
+    BiometricLoginRequest@{ shape: lean-r, label: "&quot;userIdentifier&quot;: &quot;1234567&quot; <br/> &quot;signature&quot;: &quot;MEQCIAEZ...&quot;" }
+    Verify@{ shape: rect, label: "Backend verifies signature and the challenge using public key" }
+    SuccessVerify@{ shape: diamond, label: "Success?" }
+    LogsIn@{ shape: rect, label: "User logs in" }
+
+    LogsInWithPassword@{ shape: rect, label: "User logs in with password" }
+    SuccessPasswordLogin@{ shape: diamond, label: "Success?" }
+    CreateKeyPair@{ shape: rect, label: "Public-private key pair is generated if device has strong biometric enrolled and there is no private key" }
+    IsHardwareBacked@{ shape: diamond, label: "Is generated private key hardware backed?" }
+    DeletePrivateKey@{ shape: rect, label: "Private key entry is deleted" }
+    SendPublicKey@{ shape: rect, label: "Public key is sent to backend" }
+
+    StartLoginFlow --> UsesBiometricLogin -- yes --> RequestChallenge --> Challenge --> Scan
+    UsesBiometricLogin -- no --> RedirectToPasswordLogin --> LogsInWithPassword
+    LogsInWithPassword --> SuccessPasswordLogin -- success --> CreateKeyPair --> IsHardwareBacked
+    IsHardwareBacked -- no --> DeletePrivateKey
+    IsHardwareBacked -- yes --> SendPublicKey
+    Scan --> SuccessScan -- success --> Sign --> SuccessSign
+    SuccessSign -- error -->  DeletePrivate --> RedirectToPasswordLogin
+    SuccessSign -- success --> SendBiometricLoginRequest -- request --> BiometricLoginRequest
+    BiometricLoginRequest --> Verify --> SuccessVerify -- success --> LogsIn
+```
 
 The private key belongs to the user and acts as a secret, similar to a password. It enables signing data securely. When we sign a data using a private key it gives us a signature. This signature is used to determine whether the user who signs the data is really the user of that account. Public key enables verifying the signature using original data.
 
