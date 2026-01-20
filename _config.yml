@@ -36,6 +36,13 @@ theme: minima
 markdown: GFM
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: "google4164b716f09eaa20.html"
+    values:
+      sitemap: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
