@@ -67,7 +67,7 @@ flowchart TD
     SuccessScan@{ shape: diamond, label: "Success scan?" }
     Sign@{ shape: rect, label: "Challenge is signed using private key" }
     SuccessSign@{ shape: diamond, label: "Success sign?" }
-    DeletePrivate@{ shape: rect, label: "Delete private key entry" }
+    DeletePrivate@{ shape: rect, label: "Delete private key entry (1)" }
     SendBiometricLoginRequest@{ shape: rect, label: "Send biometric login request" }
     BiometricLoginRequest@{ shape: lean-r, label: "&quot;userIdentifier&quot;: &quot;1234567&quot; <br/> &quot;signature&quot;: &quot;MEQCIAEZ...&quot;" }
     Verify@{ shape: rect, label: "Backend verifies signature and the challenge using public key" }
@@ -76,7 +76,7 @@ flowchart TD
 
     LogsInWithPassword@{ shape: rect, label: "User logs in with password" }
     SuccessPasswordLogin@{ shape: diamond, label: "Success?" }
-    CreateKeyPair@{ shape: rect, label: "Public-private key pair is generated if device has strong biometric enrolled and there is no private key" }
+    CreateKeyPair@{ shape: rect, label: "Public-private key pair is generated if device has strong biometric enrolled and there is no private key (2)" }
     IsHardwareBacked@{ shape: diamond, label: "Is generated private key hardware backed?" }
     DeletePrivateKey@{ shape: rect, label: "Private key entry is deleted" }
     SendPublicKey@{ shape: rect, label: "Public key is sent to backend" }
@@ -98,11 +98,9 @@ Before a user can login using biometrics and signing the challenge in background
 
 The generated key pair [belongs to enrolled biometrics](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder#setInvalidatedByBiometricEnrollment(boolean)) in the Android device. If a new biometric is enrolled after a key pair is generated, the key pair is invalidated [as default](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder#setInvalidatedByBiometricEnrollment(boolean)) to prevent unauthorized access when new biometrics are added. Meanwhile, when the key pair is generated, private key is put in a hardware called [Trusted Execution Environment](https://globalplatform.org/wp-content/uploads/2018/05/Introduction-to-Trusted-Execution-Environment-15May2018.pdf) or [Strong Box Keymaster](https://source.android.com/docs/security/best-practices/hardware#strongbox-keymaster).
 
-*
-*At this point we delete our private key entry because we couldn’t sign the challenge and something is wrong. It probably threw a [KeyException](https://developer.android.com/reference/java/security/KeyException) if we implemented the code correctly. Because user added an additional biometric in device and this invalidated the private key. Key pair generation and signing processes require exception handling which I demonstrated in [my project](https://github.com/mutkuensert/AndroidSignatureExample).*
+1 - *At this point we delete our private key entry because we couldn’t sign the challenge and something is wrong. It probably threw a [KeyException](https://developer.android.com/reference/java/security/KeyException) if we implemented the code correctly. Because user added an additional biometric in device and this invalidated the private key. Key pair generation and signing processes require exception handling which I demonstrated in [my project](https://github.com/mutkuensert/AndroidSignatureExample).*
 
-**
-*Here we always create a key pair for the user. If user enabled the feature and then added an additional biometric(fingerprint), a KeyException will be threw during biometric login and we will have deleted the key. The feature is enabled in this case so we should create a new key pair at this point while user is authenticated using password, therefore the user can do biometric login on next login without problem.*
+2 - *Here we always create a key pair for the user. If user enabled the feature and then added an additional biometric(fingerprint), a KeyException will be threw during biometric login and we will have deleted the key. The feature is enabled in this case so we should create a new key pair at this point while user is authenticated using password, therefore the user can do biometric login on next login without problem.*
 
 ## Strong biometric
 Strong biometric or/and lock screen credentials [can be preferred for keys](https://developer.android.com/privacy-and-security/keystore#UserAuthentication) but we need strong biometric for a secure biometric login. We have to determine whether the user has set up strong biometric before creating key pair in this biometric login flow because **we can’t create a key pair that requires strong biometric authentication when there is no enrolled strong biometric in the device.** As a note; [strong biometric(class 3)](https://source.android.com/docs/security/features/biometric) is only fingerprint for most of the Android devices for now.
