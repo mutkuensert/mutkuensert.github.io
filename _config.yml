@@ -37,6 +37,7 @@ markdown: GFM
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 defaults:
   - scope:
