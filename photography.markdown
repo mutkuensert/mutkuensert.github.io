@@ -45,7 +45,7 @@ All photographs are my original work and may not be used, reproduced, or distrib
             <img data-lazy-src="../../../assets/image/DSC_0813EDW.webp" alt="Image" />
         </div>
         <div class="f-carousel__slide" data-fancybox="gallery" data-thumb-src="../../../assets/image/DSC_0833WS.webp"
-            data-src="../../../assets/image/DSC_0833WS.webp">
+            data-src="../../../assets/image/DSC_0833W.webp">
             <img data-lazy-src="../../../assets/image/DSC_0833W.webp" alt="Image" />
         </div>
     </div>
