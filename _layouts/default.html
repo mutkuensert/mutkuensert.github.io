@@ -6,6 +6,10 @@
 <head>
   <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.2/dist/mermaid.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.12/dist/fancybox/fancybox.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.12/dist/carousel/carousel.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.12/dist/carousel/carousel.lazyload.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.12/dist/carousel/carousel.arrows.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.12/dist/carousel/carousel.thumbs.css" />
 </head>
 
 <body>
@@ -33,8 +37,19 @@
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.12/dist/fancybox/fancybox.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.12/dist/carousel/carousel.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.12/dist/carousel/carousel.lazyload.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.12/dist/carousel/carousel.arrows.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.12/dist/carousel/carousel.thumbs.umd.js"></script>
 
   <script>
+    document.querySelectorAll("[data-carousel]").forEach((container) => {
+      Carousel(container, {}, {
+        Lazyload,
+        Arrows,
+        Thumbs,
+      }).init();
+    });
     Fancybox.bind("[data-fancybox]");
   </script>
 </body>
