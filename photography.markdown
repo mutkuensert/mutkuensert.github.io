@@ -11,7 +11,8 @@ All photographs are my original work and may not be used, reproduced, or distrib
 <!-- data-thumb-src: small thumbnail image of current carousel-->
 <!-- data-lazy-src: big image of current carousel-->
 
-#### Muğla, 2019
+## Muğla, 2019
+Nikon D7200
 
 <div class="f-carousel" data-carousel>
     <div class="f-carousel__viewport">
@@ -44,7 +45,64 @@ All photographs are my original work and may not be used, reproduced, or distrib
 
 </br>
 
-#### Kaş, 2019
+## Kaş, 2019
+Nikon D7200
+
+<div class="f-carousel" data-carousel>
+    <div class="f-carousel__viewport">
+        <div class="f-carousel__slide" data-fancybox="gallery"
+            data-thumb-src="../../../assets/image/2018_kapadokya/P7215847EDWS.webp"
+            data-src="../../../assets/image/2018_kapadokya/P7215847EDW.webp">
+            <img data-lazy-src="../../../assets/image/2018_kapadokya/P7215847EDW.webp" alt="Image" />
+        </div>
+        <div class="f-carousel__slide" data-fancybox="gallery"
+            data-thumb-src="../../../assets/image/2018_kapadokya/P7215864EDWS.webp"
+            data-src="../../../assets/image/2018_kapadokya/P7215864EDW.webp">
+            <img data-lazy-src="../../../assets/image/2018_kapadokya/P7215864EDW.webp" alt="Image" />
+        </div>
+    </div>
+</div>
+
+</br>
+
+## Bursa, 2019
+Nikon D7200
+
+<div class="f-carousel" data-carousel>
+    <div class="f-carousel__viewport">
+        <div class="f-carousel__slide" data-fancybox="gallery"
+            data-thumb-src="../../../assets/image/2019_bursa/DSC_0407WS.webp"
+            data-src="../../../assets/image/2019_bursa/DSC_0407W.webp">
+            <img data-lazy-src="../../../assets/image/2019_bursa/DSC_0407W.webp" alt="Image" />
+        </div>
+        <div class="f-carousel__slide" data-fancybox="gallery"
+            data-thumb-src="../../../assets/image/2019_bursa/DSC_0412EDWS.webp"
+            data-src="../../../assets/image/2019_bursa/DSC_0412EDW.webp">
+            <img data-lazy-src="../../../assets/image/2019_bursa/DSC_0412EDW.webp" alt="Image" />
+        </div>
+                <div class="f-carousel__slide" data-fancybox="gallery"
+            data-thumb-src="../../../assets/image/2019_bursa/DSC_0421EDWS.webp"
+            data-src="../../../assets/image/2019_bursa/DSC_0421EDW.webp">
+            <img data-lazy-src="../../../assets/image/2019_bursa/DSC_0421EDW.webp" alt="Image" />
+        </div>
+        <div class="f-carousel__slide" data-fancybox="gallery"
+            data-thumb-src="../../../assets/image/2019_bursa/DSC_0437EDWS.webp"
+            data-src="../../../assets/image/2019_bursa/DSC_0437EDW.webp">
+            <img data-lazy-src="../../../assets/image/2019_bursa/DSC_0437EDW.webp" alt="Image" />
+        </div>
+                <div class="f-carousel__slide" data-fancybox="gallery"
+            data-thumb-src="../../../assets/image/2019_bursa/DSC_0451EDWS.webp"
+            data-src="../../../assets/image/2019_bursa/DSC_0451EDW.webp">
+            <img data-lazy-src="../../../assets/image/2019_bursa/DSC_0451EDW.webp" alt="Image" />
+        </div>
+    </div>
+</div>
+
+</br>
+
+## Kapadokya, 2018
+Olympus E-510
+
 <div class="f-carousel" data-carousel>
     <div class="f-carousel__viewport">
         <!-- caption example -->
@@ -64,7 +122,8 @@ All photographs are my original work and may not be used, reproduced, or distrib
 
 </br>
 
-#### Beyşehir, 2016
+## Beyşehir, 2016
+Olympus E-510
 
 <div class="f-carousel" data-carousel>
     <div class="f-carousel__viewport">
@@ -87,6 +146,24 @@ All photographs are my original work and may not be used, reproduced, or distrib
         <div class="f-carousel__slide" data-fancybox="gallery" data-thumb-src="../../../assets/image/2016_beysehir/P2082201EDWS.webp"
             data-src="../../../assets/image/2016_beysehir/P2082201EDW.webp">
             <img data-lazy-src="../../../assets/image/2016_beysehir/P2082201EDW.webp" alt="Image" />
+        </div>
+    </div>
+</div>
+
+</br>
+
+## Cat in the university, 2014
+Olympus E-510
+
+<div class="f-carousel" data-carousel>
+    <div class="f-carousel__viewport">
+        <div class="f-carousel__slide" data-fancybox="gallery" data-thumb-src="../../../assets/image/2014_cat_in_university/PA268202EDWS.webp"
+            data-src="../../../assets/image/2014_cat_in_university/PA268202EDW.webp">
+            <img data-lazy-src="../../../assets/image/2014_cat_in_university/PA268202EDW.webp" alt="Image" />
+        </div>
+        <div class="f-carousel__slide" data-fancybox="gallery" data-thumb-src="../../../assets/image/2014_cat_in_university/PA268248EDWS.webp"
+            data-src="../../../assets/image/2014_cat_in_university/PA268248EDW.webp">
+            <img data-lazy-src="../../../assets/image/2014_cat_in_university/PA268248EDW.webp" alt="Image" />
         </div>
     </div>
 </div>
