@@ -45,6 +45,11 @@ defaults:
     values:
       sitemap: false
 
+  - scope:
+      path: "gallery_item_creator.sh"
+    values:
+      sitemap: false
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
