@@ -122,28 +122,55 @@ Olympus E-510
 
 </br>
 
-## Beyşehir, 2016
-Olympus E-510
+## Beyşehir
 
 <div class="f-carousel" data-carousel>
     <div class="f-carousel__viewport">
-        <div class="f-carousel__slide" data-fancybox="gallery" data-thumb-src="../../../assets/image/2016_beysehir/P2081871ED2WS.webp"
+        <div class="f-carousel__slide" data-fancybox="gallery"
+            data-caption="2019 - Nikon D7200"
+            data-thumb-src="../../../assets/image/2019_beysehir/DSC_1095EDWS.webp"
+            data-src="../../../assets/image/2019_beysehir/DSC_1095EDW.webp">
+            <img data-lazy-src="../../../assets/image/2019_beysehir/DSC_1095EDW.webp" alt="Image" />
+        </div>
+        <div class="f-carousel__slide" data-fancybox="gallery"
+            data-caption="2019 - Nikon D7200"
+            data-thumb-src="../../../assets/image/2019_beysehir/DSC_1097ED2WS.webp"
+            data-src="../../../assets/image/2019_beysehir/DSC_1097ED2W.webp">
+            <img data-lazy-src="../../../assets/image/2019_beysehir/DSC_1097ED2W.webp" alt="Image" />
+        </div>
+        <div class="f-carousel__slide" data-fancybox="gallery"
+            data-caption="2019 - Nikon D7200"
+            data-thumb-src="../../../assets/image/2019_beysehir/DSC_1122EDWS.webp"
+            data-src="../../../assets/image/2019_beysehir/DSC_1122EDW.webp">
+        <img data-lazy-src="../../../assets/image/2019_beysehir/DSC_1122EDW.webp" alt="Image" />
+        </div>
+        <div class="f-carousel__slide" data-fancybox="gallery"
+            data-caption="2016 - Olympus E-510"
+            data-thumb-src="../../../assets/image/2016_beysehir/P2081871ED2WS.webp"
             data-src="../../../assets/image/2016_beysehir/P2081871ED2W.webp">
             <img data-lazy-src="../../../assets/image/2016_beysehir/P2081871ED2W.webp" alt="Image" />
         </div>
         <div class="f-carousel__slide" data-fancybox="gallery"
-            data-thumb-src="../../../assets/image/2016_beysehir/P2081864EDWS.webp" data-src="../../../assets/image/2016_beysehir/P2081864EDW.webp">
+            data-caption="2016 - Olympus E-510"
+            data-thumb-src="../../../assets/image/2016_beysehir/P2081864EDWS.webp"
+            data-src="../../../assets/image/2016_beysehir/P2081864EDW.webp">
             <img data-lazy-src="../../../assets/image/2016_beysehir/P2081864EDW.webp" alt="Image" />
         </div>
-        <div class="f-carousel__slide" data-fancybox="gallery" data-thumb-src="../../../assets/image/2016_beysehir/P2081957EDWS.webp"
+        <div class="f-carousel__slide" data-fancybox="gallery"
+            data-caption="2016 - Olympus E-510"
+            data-thumb-src="../../../assets/image/2016_beysehir/P2081957EDWS.webp"
             data-src="../../../assets/image/2016_beysehir/P2081957EDW.webp">
             <img data-lazy-src="../../../assets/image/2016_beysehir/P2081957EDW.webp" alt="Image" />
         </div>
-        <div class="f-carousel__slide" data-fancybox="gallery" data-thumb-src="../../../assets/image/2016_beysehir/P2082189EDWS.webp"
+        <div class="f-carousel__slide" data-fancybox="gallery"
+            data-caption="2016 - Olympus E-510"
+            data-thumb-src="../../../assets/image/2016_beysehir/P2082189EDWS.webp"
             data-src="../../../assets/image/2016_beysehir/P2082189EDW.webp">
             <img data-lazy-src="../../../assets/image/2016_beysehir/P2082189EDW.webp" alt="Image" />
         </div>
-        <div class="f-carousel__slide" data-fancybox="gallery" data-thumb-src="../../../assets/image/2016_beysehir/P2082201EDWS.webp"
+        <div class="f-carousel__slide" data-fancybox="gallery"
+            data-caption="2016 - Olympus E-510"
+            data-thumb-src="../../../assets/image/2016_beysehir/P2082201EDWS.webp"
             data-src="../../../assets/image/2016_beysehir/P2082201EDW.webp">
             <img data-lazy-src="../../../assets/image/2016_beysehir/P2082201EDW.webp" alt="Image" />
         </div>
