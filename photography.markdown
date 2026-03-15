@@ -50,15 +50,17 @@ Nikon D7200
 
 <div class="f-carousel" data-carousel>
     <div class="f-carousel__viewport">
+        <!-- caption example -->
         <div class="f-carousel__slide" data-fancybox="gallery"
-            data-thumb-src="../../../assets/image/2018_kapadokya/P7215847EDWS.webp"
-            data-src="../../../assets/image/2018_kapadokya/P7215847EDW.webp">
-            <img data-lazy-src="../../../assets/image/2018_kapadokya/P7215847EDW.webp" alt="Image" />
+            data-caption="&lt;a href=&quot;https://maps.app.goo.gl/oYh6PGWK47PxPicC8&quot; target=&quot;_blank&quot;&gt;Kaş&lt;/a&gt;"
+            data-thumb-src="../../../assets/image/2019_kas/DSC_0743EDWS.webp"
+            data-src="../../../assets/image/2019_kas/DSC_0743EDW.webp">
+            <img data-lazy-src="../../../assets/image/2019_kas/DSC_0743EDW.webp" alt="Image" />
         </div>
         <div class="f-carousel__slide" data-fancybox="gallery"
-            data-thumb-src="../../../assets/image/2018_kapadokya/P7215864EDWS.webp"
-            data-src="../../../assets/image/2018_kapadokya/P7215864EDW.webp">
-            <img data-lazy-src="../../../assets/image/2018_kapadokya/P7215864EDW.webp" alt="Image" />
+            data-thumb-src="../../../assets/image/2019_kas/DSC_0744EDWS.webp"
+            data-src="../../../assets/image/2019_kas/DSC_0744EDW.webp">
+            <img data-lazy-src="../../../assets/image/2019_kas/DSC_0744EDW.webp" alt="Image" />
         </div>
     </div>
 </div>
@@ -105,17 +107,15 @@ Olympus E-510
 
 <div class="f-carousel" data-carousel>
     <div class="f-carousel__viewport">
-        <!-- caption example -->
         <div class="f-carousel__slide" data-fancybox="gallery"
-            data-caption="&lt;a href=&quot;https://maps.app.goo.gl/oYh6PGWK47PxPicC8&quot; target=&quot;_blank&quot;&gt;Kaş&lt;/a&gt;"
-            data-thumb-src="../../../assets/image/2019_kas/DSC_0743EDWS.webp"
-            data-src="../../../assets/image/2019_kas/DSC_0743EDW.webp">
-            <img data-lazy-src="../../../assets/image/2019_kas/DSC_0743EDW.webp" alt="Image" />
+            data-thumb-src="../../../assets/image/2018_kapadokya/P7215847EDWS.webp"
+            data-src="../../../assets/image/2018_kapadokya/P7215847EDW.webp">
+            <img data-lazy-src="../../../assets/image/2018_kapadokya/P7215847EDW.webp" alt="Image" />
         </div>
         <div class="f-carousel__slide" data-fancybox="gallery"
-            data-thumb-src="../../../assets/image/2019_kas/DSC_0744EDWS.webp"
-            data-src="../../../assets/image/2019_kas/DSC_0744EDW.webp">
-            <img data-lazy-src="../../../assets/image/2019_kas/DSC_0744EDW.webp" alt="Image" />
+            data-thumb-src="../../../assets/image/2018_kapadokya/P7215864EDWS.webp"
+            data-src="../../../assets/image/2018_kapadokya/P7215864EDW.webp">
+            <img data-lazy-src="../../../assets/image/2018_kapadokya/P7215864EDW.webp" alt="Image" />
         </div>
     </div>
 </div>
