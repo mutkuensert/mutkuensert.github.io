@@ -44,11 +44,30 @@
 
   <script>
     document.querySelectorAll("[data-carousel]").forEach((container) => {
-      Carousel(container, {}, {
-        Lazyload,
-        Arrows,
-        Thumbs,
-      }).init();
+      Carousel(
+        container,
+        {
+          slidesPerPage: 1,
+          on: {
+            render: (instance, slides) => {
+              for (const slide of slides) {
+                slide.el.style.height = "50vh";
+                const img = slide.el.querySelector("img");
+                if (img) {
+                  img.style.maxHeight = "100%";
+                  img.style.width = "auto";
+                  img.style.display = "block";
+                  img.style.margin = "auto";
+                }
+              }
+            },
+          },
+        },
+        {
+          Lazyload,
+          Arrows,
+          Thumbs,
+        }).init();
     });
     Fancybox.bind("[data-fancybox]");
   </script>
