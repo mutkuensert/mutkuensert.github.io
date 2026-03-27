@@ -7,6 +7,8 @@ I believe in keeping things as they are. Most of my photos are minimally editedâ
 
 All photographs are my original work and may not be used, reproduced, or distributed without permission.
 
+Click on photographes for full screen paginated view.
+
 ## MuÄŸla, 2019
 Nikon D7200
 
@@ -174,31 +176,31 @@ Olympus E-510
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         <div class="swiper-slide">
-            <a href="../../../assets/image/2019_beysehir/P2081871ED2W.webp" target="_blank">
+            <a href="../../../assets/image/2016_beysehir/P2081871ED2W.webp" target="_blank">
                 <img src="../../../assets/image/2019_beysehir/P2081871ED2W.webp" alt="Image" loading="lazy" />
             </a>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         <div class="swiper-slide">
-            <a href="../../../assets/image/2019_beysehir/P2081864EDW.webp" target="_blank">
+            <a href="../../../assets/image/2016_beysehir/P2081864EDW.webp" target="_blank">
                 <img src="../../../assets/image/2019_beysehir/P2081864EDW.webp" alt="Image" loading="lazy" />
             </a>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         <div class="swiper-slide">
-            <a href="../../../assets/image/2019_beysehir/P2081957EDW.webp" target="_blank">
+            <a href="../../../assets/image/2016_beysehir/P2081957EDW.webp" target="_blank">
                 <img src="../../../assets/image/2019_beysehir/P2081957EDW.webp" alt="Image" loading="lazy" />
             </a>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         <div class="swiper-slide">
-            <a href="../../../assets/image/2019_beysehir/P2082189EDW.webp" target="_blank">
+            <a href="../../../assets/image/2016_beysehir/P2082189EDW.webp" target="_blank">
                 <img src="../../../assets/image/2019_beysehir/P2082189EDW.webp" alt="Image" loading="lazy" />
             </a>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         <div class="swiper-slide">
-            <a href="../../../assets/image/2019_beysehir/P2082201EDW.webp" target="_blank">
+            <a href="../../../assets/image/2016_beysehir/P2082201EDW.webp" target="_blank">
                 <img src="../../../assets/image/2019_beysehir/P2082201EDW.webp" alt="Image" loading="lazy" />
             </a>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
