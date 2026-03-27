@@ -154,6 +154,22 @@ Olympus E-510
 </br>
 
 ## Beyşehir
+2026 Nikon D7200
+<div class="swiper" data-my-swiper>
+    <div class="swiper-wrapper pswp-gallery" data-gallery>
+        <div class="swiper-slide">
+            <a href="../../../assets/image/2026_beysehir/DSC_3705W.webp" target="_blank">
+                <img src="../../../assets/image/2026_beysehir/DSC_3705W.webp" alt="Image" loading="lazy" />
+            </a>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+</br>
 
 <div class="swiper" data-my-swiper>
     <div class="swiper-wrapper pswp-gallery" data-gallery>
