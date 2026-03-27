@@ -155,6 +155,7 @@ Olympus E-510
 
 ## Beyşehir
 2026 Nikon D7200
+
 <div class="swiper" data-my-swiper>
     <div class="swiper-wrapper pswp-gallery" data-gallery>
         <div class="swiper-slide">
@@ -170,6 +171,8 @@ Olympus E-510
 </div>
 
 </br>
+
+2019 Nikon D7200
 
 <div class="swiper" data-my-swiper>
     <div class="swiper-wrapper pswp-gallery" data-gallery>
@@ -191,33 +194,45 @@ Olympus E-510
             </a>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+</br>
+
+2016 Olympus E-510
+
+<div class="swiper" data-my-swiper>
+    <div class="swiper-wrapper pswp-gallery" data-gallery>
         <div class="swiper-slide">
             <a href="../../../assets/image/2016_beysehir/P2081871ED2W.webp" target="_blank">
-                <img src="../../../assets/image/2019_beysehir/P2081871ED2W.webp" alt="Image" loading="lazy" />
+                <img src="../../../assets/image/2016_beysehir/P2081871ED2W.webp" alt="Image" loading="lazy" />
             </a>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         <div class="swiper-slide">
             <a href="../../../assets/image/2016_beysehir/P2081864EDW.webp" target="_blank">
-                <img src="../../../assets/image/2019_beysehir/P2081864EDW.webp" alt="Image" loading="lazy" />
+                <img src="../../../assets/image/2016_beysehir/P2081864EDW.webp" alt="Image" loading="lazy" />
             </a>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         <div class="swiper-slide">
             <a href="../../../assets/image/2016_beysehir/P2081957EDW.webp" target="_blank">
-                <img src="../../../assets/image/2019_beysehir/P2081957EDW.webp" alt="Image" loading="lazy" />
+                <img src="../../../assets/image/2016_beysehir/P2081957EDW.webp" alt="Image" loading="lazy" />
             </a>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         <div class="swiper-slide">
             <a href="../../../assets/image/2016_beysehir/P2082189EDW.webp" target="_blank">
-                <img src="../../../assets/image/2019_beysehir/P2082189EDW.webp" alt="Image" loading="lazy" />
+                <img src="../../../assets/image/2016_beysehir/P2082189EDW.webp" alt="Image" loading="lazy" />
             </a>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         <div class="swiper-slide">
             <a href="../../../assets/image/2016_beysehir/P2082201EDW.webp" target="_blank">
-                <img src="../../../assets/image/2019_beysehir/P2082201EDW.webp" alt="Image" loading="lazy" />
+                <img src="../../../assets/image/2016_beysehir/P2082201EDW.webp" alt="Image" loading="lazy" />
             </a>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
@@ -226,7 +241,6 @@ Olympus E-510
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
 </div>
-
 
 </br>
 
