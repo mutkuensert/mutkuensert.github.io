@@ -6,6 +6,7 @@
 <head>
   <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.2/dist/mermaid.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.min.css">
 </head>
 
 <body>
@@ -33,6 +34,8 @@
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/umd/photoswipe.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/umd/photoswipe-lightbox.umd.min.js"></script>
 
   <script>
     document.querySelectorAll("[data-my-swiper]").forEach((container) => {
@@ -48,6 +51,26 @@
         },
       });
     });
+
+    document.querySelectorAll('[data-gallery] a').forEach(link => {
+      const img = new Image();
+      img.onload = () => {
+        link.dataset.pswpWidth = img.width;
+        link.dataset.pswpHeight = img.height;
+      };
+      img.src = link.href;
+    });
+    document.querySelectorAll('[data-gallery]').forEach((galleryEl) => {
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: galleryEl,
+        children: 'a',
+        pswpModule: PhotoSwipe
+      });
+
+      lightbox.init();
+    });
+
+    lightbox.init();
   </script>
 </body>
 
