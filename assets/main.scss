@@ -1,4 +1,6 @@
---- --- @import "minima";
+--- 
+--- 
+@import "minima";
 
 .swiper {
   width: 100%;
@@ -8,7 +10,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #444;
+  background: #090f16;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +20,8 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  max-height: 80vh;
+  object-fit: contain;
 }
 
 .swiper-slide {
