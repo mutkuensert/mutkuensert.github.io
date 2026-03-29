@@ -9,6 +9,31 @@ All photographs are my original work and may not be used, reproduced, or distrib
 
 Click on photographes for full screen paginated view.
 
+## Side, 2020
+Nikon D7200
+
+<div class="swiper" data-my-swiper>
+    <div class="swiper-wrapper pswp-gallery" data-gallery>
+        <div class="swiper-slide">
+            <a href="../../../assets/image/2020_side/DSC_2355EDW.webp" target="_blank">
+                <img src="../../../assets/image/2020_side/DSC_2355EDW.webp" alt="Image" loading="lazy" />
+            </a>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide">
+            <a href="../../../assets/image/2020_side/DSC_2329W.webp" target="_blank">
+                <img src="../../../assets/image/2020_side/DSC_2329W.webp" alt="Image" loading="lazy" />
+            </a>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+</br>
+
 ## Muğla, 2019
 Nikon D7200
 
