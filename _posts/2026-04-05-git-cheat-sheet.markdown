@@ -9,7 +9,7 @@ excerpt: ""
 ## Add
 Add single file
 
-`git add <filename.type>`
+`git add <filename>`
 
 </br>
 
@@ -17,15 +17,15 @@ Add all
 
 `git add .`
 
-`git add --all`
+or
 
-`git add -A`
+(-A=--all)
+
+`git add --all`
 
 </br>
 
-Add only tracked ones
-
-`git add -u`
+Add only tracked ones(-u=--update)
 
 `git add --update`
 
@@ -107,7 +107,7 @@ Checkout to a commit
 
 </br>
 
-To commit with auto stage
+To commit with auto stage(adds tracked files)
 
 `git commit -a -m "commit message"`
 
