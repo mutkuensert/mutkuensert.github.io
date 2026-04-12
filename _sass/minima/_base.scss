@@ -149,9 +149,10 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9375);
-  border: 1px solid $grey-color-light;
+  color: #f2f5f8;
+  border: 1px solid #384657;
   border-radius: 3px;
-  background-color: #eef;
+  background-color: #18202a;
 }
 
 code {
@@ -164,6 +165,8 @@ pre {
 
   > code {
     border: 0;
+    background-color: transparent;
+    color: inherit;
     padding-right: 0;
     padding-left: 0;
   }

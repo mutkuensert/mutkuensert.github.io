@@ -30,6 +30,7 @@ github_username:  mutkuensert
 header_pages:
   - pages/photography.markdown
   - pages/about.markdown
+show_excerpts: true
 
 # Build settings
 theme: minima

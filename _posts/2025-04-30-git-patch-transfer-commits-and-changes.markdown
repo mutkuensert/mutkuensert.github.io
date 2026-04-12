@@ -3,6 +3,7 @@ layout: post
 title:  "Git Patch: Transferring commits or changes easily"
 date:   2025-04-30 20:00:00 +0300
 categories: general
+excerpt: ""
 ---
 git patch is a super easy way to move either commits or local changes between repositories or branches. It can be used in two primary ways:
 * Transferring commits

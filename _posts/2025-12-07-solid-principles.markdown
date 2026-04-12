@@ -4,6 +4,7 @@ title:  "Solid principles"
 description: "Explanation of solid with simple examples"
 date:   2025-12-08 20:00:00 +0300
 categories: architecture
+excerpt: ""
 ---
 ## The Single Responsibility Principle
 A module should be responsible to one, and only one, actor, Uncle Bob says.
