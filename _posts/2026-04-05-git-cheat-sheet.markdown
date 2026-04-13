@@ -224,6 +224,17 @@ Move directory
 
 `git mv old-dir/ new-location/`
 
+## Pull
+`git pull`
+
+`git pull origin main`
+
+</br>
+
+Fetch and rebase
+
+`git pull --rebase`
+
 ## Push
 `git push`
 
