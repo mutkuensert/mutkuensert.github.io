@@ -188,6 +188,16 @@ Show a summary of a diff
 
 `git log --oneline`
 
+`git log --graph <branch_name>`
+
+`git log --oneline --graph --decorate`
+
+</br>
+
+Commits on a file
+
+`git log --follow <file>`
+
 ## Merge
 `git merge <other_branch_name>`
 
