@@ -11,7 +11,7 @@ Even though the base urls in project configurations usually starts with https, i
 
 Create a file under xml (network_security_config.xml):
 
-To disable cleartext traffic for all connections
+Disable cleartext traffic for all connections
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
@@ -19,12 +19,13 @@ To disable cleartext traffic for all connections
 </network-security-config>
 ```
 
-To disable cleartext traffic for a specific domain name:
+Or enable cleartext for specified domain
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-    <domain-config cleartextTrafficPermitted="false">
-        <domain includeSubdomains="true">domain.com</domain>
+    <base-config cleartextTrafficPermitted="false" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain>localhost</domain>
     </domain-config>
 </network-security-config>
 ```
@@ -154,7 +155,7 @@ class SecurityProviderStateManager {
 
 Certificate pinning restricts the certificates for client's network configuration to a specified list of public keys so that any other certificate won't be accepted for tls handshakes. The downside of this method is clients have to be updated with the new public key when the certificate is renewed, otherwise connections will be blocked because tls handshake won't be successful. [While Android doesn't recommend certificate pinning, they say that multiple backup pins should be used to prevent connectivity issues if certificate pinning is used.](https://developer.android.com/privacy-and-security/security-ssl#Pinning)
 
-Other links for certificate pinning:
+Other links for certificate pinning
 - https://developer.android.com/privacy-and-security/security-config#CertificatePinning
 - https://square.github.io/okhttp/3.x/okhttp/okhttp3/CertificatePinner.html
 
