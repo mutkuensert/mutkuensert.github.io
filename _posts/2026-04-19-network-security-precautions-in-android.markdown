@@ -43,7 +43,7 @@ Add it in application in AndroidManifest.xml
 </br>
 
 ## Certificate Transparency
-Certificate transparency is a system that requires certificate authorities to submit all certificates to a public log so that domain owners can identify any certificates issued without their approval. That means, if we enforce certificate transparency for our connections, it reduces some risks like MITM attacks because domain owners that use certificate transparency can take immediate action for revoking mis-issued certificates. Still, certificate transparency doesn’t directly prevent connections with revoked certificates though.
+Certificate transparency is a system that requires certificate authorities to submit all certificates to a public log so that domain owners can identify any certificates issued without their approval. That means, if we enforce certificate transparency for our connections, it reduces some risks like MITM attacks because domain owners that use certificate transparency can take immediate action for revoking mis-issued certificates. Still, certificate transparency doesn’t directly prevent connections with revoked certificates though. It makes more sense when it's used along with crl or ocsp stapling.
 
 We can enforce certificate transparency for the certificates in tls handshakes on Android 16. Unfortunately CT enforcement is not supported on Android 15 (api level 35) and lower. It's disabled on Android 16 (api level 36) by default and enabled on Android 17 (api level 37) by default.
 
@@ -60,7 +60,7 @@ To enable CT enforcement
 </br>
 
 ## OCSP - Online Certificate Status Protocol
-You might encounter OCSP while doing research about network security. OCSP simply involves asking a certificate's status to the certificate authority during tls handshakes. But asking something like "Is this certificate belongs to this website?" does not coincide with privacy and ocsp responder might have performance or even a connection problem at the moment. Let's Encrypt [ended OCSP support](https://letsencrypt.org/2024/12/05/ending-ocsp) in 2025 which includes ending support for stapling features as well and it seems that internet will use Certificate Revokation List again or/and short lived certificates.
+You might encounter OCSP while doing research about network security. OCSP simply involves asking a certificate's status(good or revoked?) to the certificate authority during tls handshakes. But asking something like "Is this certificate belongs to this website?" does not coincide with privacy and ocsp responder might have performance or even a connection problem at the moment. Let's Encrypt [ended OCSP support](https://letsencrypt.org/2024/12/05/ending-ocsp) in 2025 which includes ending support for stapling features as well and it seems that internet will use Certificate Revokation List again or/and short lived certificates.
 
 OCSP stapling is a way for servers to send their certificates along with the ocsp response together to the client so that users keep their privacy and potential connection or performance issues while requesting to ocsp responders are prevented. The ocsp response is also signed by certificate authority so that clients can verify it the same way they verify certificates.
 
