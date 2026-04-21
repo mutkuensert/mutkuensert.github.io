@@ -52,3 +52,36 @@ $on-laptop:        800px !default;
   "minima/layout",
   "minima/syntax-highlighting"
 ;
+
+.language-mermaid {
+  color: #f2f5f8;
+}
+
+.language-mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.language-mermaid .messageLine0,
+.language-mermaid .messageLine1,
+.language-mermaid .messageLine2,
+.language-mermaid .messageLine3,
+.language-mermaid .messageLine4,
+.language-mermaid .messageLine5,
+.language-mermaid .actor-line {
+  stroke: #d9e2ec !important;
+}
+
+.language-mermaid marker path,
+.language-mermaid marker polygon {
+  fill: #d9e2ec !important;
+  stroke: #d9e2ec !important;
+}
+
+.language-mermaid .messageText,
+.language-mermaid .loopText,
+.language-mermaid .labelText,
+.language-mermaid .noteText {
+  fill: #f2f5f8 !important;
+  stroke: none !important;
+}
