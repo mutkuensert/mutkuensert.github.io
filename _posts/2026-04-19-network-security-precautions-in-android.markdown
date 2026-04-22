@@ -44,6 +44,28 @@ Add it in application in AndroidManifest.xml
 </br>
 
 ## Certificate Transparency
+To understand the benefit of certificate transparency, we have to understand the certificate's role in TLS handshake. During TLS handshake, server sends **Certificate** and **CertificateVerify** along with the other handshake messages.
+
+### TLS 1.3 Handshake Steps
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Server
+    Client->>Server: ClientHello
+    Server->>Client: ServerHello
+    Server-->>Client: Extensions, Certificate, CertificateVerify, Finished
+    Client-->>Server: Finished
+    Client<<-->>Server: Application data
+```
+
+## The Role of Certificate During TLS Handshake
+### Certificate
+Certificate message contains leaf and intermediate certificates and client verifies signature in leaf certificate using intermediate certificate's public key. Then client finds issuer root certificate of intermediate certificate in client's trust store and verifies signature in intermediate certificate using root certificate's public key. This verification is called chain of trust and it proves that the certificate is connected to a trusted root certificate in the client’s trust store.
+
+### CertificateVerify
+CertificateVerify is the signature of previous handshake transcript signed with leaf certificate private key. Client verifies this signature using leaf certificate's public key. This proves that the server is the true owner of the certificate and its private key.
+
+### Transparency
 Certificate transparency is a system that requires certificate authorities to submit all certificates to a public log. Thus, domain owners can identify any certificate issued without their approval and request revocation from the certificate authority. That means, if we enforce certificate transparency for our connections in client side, it reduces risk of MITM attacks because domain owners that use certificate transparency can take immediate action for revoking mis-issued certificates.
 
 Certificate transparency doesn’t directly prevent connections with revoked certificates. It's just a public log that contains certificates that are issued for domain names (e.g. domain.com). It makes more sense when it's used along with CRL or OCSP stapling.
