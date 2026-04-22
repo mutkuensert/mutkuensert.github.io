@@ -108,13 +108,75 @@ Android doesn't directly call it CRL check but they say that they use a combinat
 </br>
 
 ## Updating GMS security provider
-Android recommends ensuring security provider updates against SSL exploits.
+Android [recommends](https://developer.android.com/privacy-and-security/security-gms-provider) ensuring security provider updates against SSL exploits. The security provider should be patched [before any network connection](https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0020/).
 
 To use ProviderInstaller and others add dependency
 ```kotlin
 implementation("com.google.android.gms:play-services-base:18.10.0")
 ```
-and patch the security provider on [app startup](https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0020/) as described in [developers.android.com](https://developer.android.com/privacy-and-security/security-gms-provider) before any network connection.
+
+*SecurityProviderInterceptor.kt*
+```kotlin
+import android.content.Context
+import com.google.android.gms.common.GoogleApiAvailability
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException
+import com.google.android.gms.common.GooglePlayServicesRepairableException
+import com.google.android.gms.security.ProviderInstaller
+import core.data.network.SecurityProviderStateManager
+import okhttp3.Interceptor
+import okhttp3.Response
+import timber.log.Timber
+import java.io.IOException
+
+class SecurityProviderInterceptor(
+    private val context: Context,
+    private val securityProviderStateManager: SecurityProviderStateManager
+) : Interceptor {
+    override fun intercept(chain: Interceptor.Chain): Response {
+        if (securityProviderStateManager.isChecked) return chain.proceed(chain.request())
+        checkSecurityProvider()
+        return chain.proceed(chain.request())
+    }
+
+    private fun checkSecurityProvider() {
+        try {
+            ProviderInstaller.installIfNeeded(context)
+            securityProviderStateManager.isChecked = true
+        } catch (e: GooglePlayServicesRepairableException) {
+            // Indicates that Google Play services is out of date, disabled, etc.
+            // Prompt the user to install/update/enable Google Play services.
+            GoogleApiAvailability.getInstance()
+                .showErrorNotification(context, e.connectionStatusCode)
+
+            Timber.e(e)
+            throw IOException("Google Play services is out of date or disabled")
+        } catch (e: GooglePlayServicesNotAvailableException) {
+            // Indicates a non-recoverable error; the ProviderInstaller can't
+            // install an up-to-date Provider.
+            Timber.e(e)
+            throw IOException("Non-recoverable Google Play services error")
+        }
+    }
+}
+```
+
+Simple state holder class (must be singleton)
+
+*SecurityProviderStateManager.kt*
+```kotlin
+class SecurityProviderStateManager {
+    var isChecked = false
+}
+```
+
+It's important to use addInterceptor instead of addNetworkInterceptor. TLS is established earlier when it comes to network interceptor. See [Chain::connection](https://github.com/square/okhttp/blob/master/okhttp/src/commonJvmAndroid/kotlin/okhttp3/Interceptor.kt) and [Connection::handshake](https://github.com/square/okhttp/blob/master/okhttp/src/commonJvmAndroid/kotlin/okhttp3/Connection.kt)
+```kotlin
+OkHttpClient()
+    .newBuilder()
+    .addInterceptor(SecurityProviderInterceptor(context, securityProviderStateManager))
+    .build()
+```
+See [interceptors on square.github.io](https://square.github.io/okhttp/features/interceptors/)
 
 </br>
 
@@ -159,3 +221,6 @@ Other links for certificate pinning
 - https://knowledge.digicert.com/solution/how-certificate-chains-work
 - https://www.youtube.com/watch?v=QSeMT4RK62M
 - https://www.rfc-editor.org/rfc/rfc8446.html
+- https://square.github.io/okhttp/features/interceptors/
+- https://github.com/square/okhttp/blob/master/okhttp/src/commonJvmAndroid/kotlin/okhttp3/Connection.kt
+- https://github.com/square/okhttp/blob/master/okhttp/src/commonJvmAndroid/kotlin/okhttp3/Interceptor.kt
