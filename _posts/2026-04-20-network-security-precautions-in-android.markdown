@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Network security precautions in Android"
-date:   2026-04-19 20:00:00 +0300
+date:   2026-04-20 20:00:00 +0300
 categories: android
 excerpt: ""
 ---
@@ -96,14 +96,14 @@ It seems that the ecosystem is shifting towards short-lived certificates, CRLs o
 ## CRL - Certificate Revocation List
 Certificate revocation list is a list of digital certificates that have been revoked by the certificate authority. Apple says that they check revoked certificates using CRL for network calls at system level:
 
-*From [support.apple.com](https://support.apple.com/guide/security/tls-security-sec100a75d12/1/web/1), visited on April 19, 2026*
+*From [support.apple.com](https://support.apple.com/guide/security/tls-security-sec100a75d12/1/web/1), visited on April 20, 2026*
 > On devices with iOS 11 or later and macOS 10.13 or later, Apple devices are periodically updated with a current list of revoked and constrained certificates. The list is aggregated from certificate revocation lists (CRLs), which are published by each of the built-in root certificate authorities trusted by Apple, as well as by their subordinate CA issuers. The list may also include other constraints at Apple’s discretion. This information is consulted whenever a network API function is used to make a secure connection.
 
 </br>
 
 Android doesn't directly call it CRL check but they say that they use a combination of a blocklist and certificate transparency
 
-*From [developer.android.com](https://developer.android.com/privacy-and-security/security-ssl#certificate-validation), visited on April 19, 2026*
+*From [developer.android.com](https://developer.android.com/privacy-and-security/security-ssl#certificate-validation), visited on April 20, 2026*
 > To mitigate this risk, Android handles certificate revocation system-wide, through a combination of a blocklist and certificate transparency, without relying on on-line certificate verification. In addition, Android will validate OCSP responses stapled to the TLS handshake.
 
 </br>
