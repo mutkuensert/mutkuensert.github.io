@@ -46,31 +46,30 @@ Add it in application in AndroidManifest.xml
 ## Certificate Transparency
 To understand the benefit of certificate transparency, we have to understand the certificate's role in TLS handshake. During TLS handshake, server sends **Certificate** and **CertificateVerify** along with the other handshake messages.
 
-### TLS 1.3 Handshake Steps
+TLS 1.3 Handshake steps:
 ```mermaid
 sequenceDiagram
     participant Client
     participant Server
     Client->>Server: ClientHello
     Server->>Client: ServerHello
-    Server-->>Client: Extensions, Certificate, CertificateVerify, Finished
+    Server-->>Client: Extensions, Certificate*, CertificateVerify*, Finished
     Client-->>Server: Finished
     Client<<-->>Server: Application data
 ```
 
-## The Role of Certificate During TLS Handshake
-### Certificate
-Certificate message contains leaf and intermediate certificates and client verifies signature in leaf certificate using intermediate certificate's public key. Then client finds issuer root certificate of intermediate certificate in client's trust store and verifies signature in intermediate certificate using root certificate's public key. This verification is called chain of trust and it proves that the certificate is connected to a trusted root certificate in the client’s trust store.
+#### Certificate
+Certificate message contains leaf and intermediate certificates and client verifies signature in leaf certificate using intermediate certificate's public key. Then client finds issuer root certificate of intermediate certificate in client's trust store and verifies signature in intermediate certificate using root certificate's public key. This verification is called chain of trust and it proves that the leaf certificate is connected to a trusted root certificate in the client’s trust store.
 
-### CertificateVerify
+#### CertificateVerify
 CertificateVerify is the signature of previous handshake transcript signed with leaf certificate private key. Client verifies this signature using leaf certificate's public key. This proves that the server is the true owner of the certificate and its private key.
 
-### Transparency
+#### Transparency
 Certificate transparency is a system that requires certificate authorities to submit all certificates to a public log. Thus, domain owners can identify any certificate issued without their approval and request revocation from the certificate authority. That means, if we enforce certificate transparency for our connections in client side, it reduces risk of MITM attacks because domain owners that use certificate transparency can take immediate action for revoking mis-issued certificates.
 
 Certificate transparency doesn’t directly prevent connections with revoked certificates. It's just a public log that contains certificates that are issued for domain names (e.g. domain.com). It makes more sense when it's used along with CRL or OCSP stapling.
 
-We can [enforce](https://developer.android.com/privacy-and-security/security-config#CertificateTransparencySummary) certificate transparency for the certificates in tls handshakes on Android 16. Unfortunately CT enforcement is not supported on Android 15 (api level 35) and lower. It's disabled on Android 16 (api level 36) by default and enabled on Android 17 (api level 37) by default.
+We can [enforce certificate transparency](https://developer.android.com/privacy-and-security/security-config#CertificateTransparencySummary) for the certificates in TLS handshakes on Android 16. Unfortunately CT enforcement is not supported on Android 15 (api level 35) and lower. It's disabled on Android 16 (api level 36) by default and enabled on Android 17 (api level 37) by default.
 
 To enable CT enforcement
 ```xml
@@ -85,11 +84,11 @@ To enable CT enforcement
 </br>
 
 ## OCSP - Online Certificate Status Protocol
-OCSP simply involves asking a certificate's status(good or revoked?) to the certificate authority within a separate network request. But asking something like "Does this certificate belong to this website?" does not coincide with privacy and ocsp responder might have performance or even a connection problem at the moment.
+OCSP simply involves asking a certificate's status(good or revoked?) to the certificate authority within a separate network request. But asking something like "Does this certificate belong to this website?" does not coincide with privacy and OCSP responder might have performance or even a connection problem at the moment.
 
 Let's Encrypt [ended OCSP support](https://letsencrypt.org/2024/12/05/ending-ocsp) in 2025. As a result, OCSP-based mechanisms including OCSP stapling are no longer usable for Let's Encrypt certificates anymore. OCSP stapling is a way for servers to include a signed OCSP response in the TLS handshake so that users keep their privacy and potential connection or performance issues while requesting to OCSP responders are prevented. The OCSP response is also signed by certificate authority so that clients can verify it using issuer certificate authority public key(usually intermediate certificate).
 
-It seems that the ecosystem is shifting towards short-lived certificates, CRLs or client managed blocklists.
+It seems that the ecosystem is shifting towards short-lived certificates, CRLs or client-managed blocklists.
 
 </br>
 
