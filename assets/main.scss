@@ -35,3 +35,9 @@
 .swiper-slide:nth-child(3n) {
   width: 40%;
 }
+
+.post-content a,
+.page-content a {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
