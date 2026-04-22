@@ -88,7 +88,7 @@ OCSP simply involves asking a certificate's status(good or revoked?) to the cert
 
 Let's Encrypt [ended OCSP support](https://letsencrypt.org/2024/12/05/ending-ocsp) in 2025. As a result, OCSP-based mechanisms including OCSP stapling are no longer usable for Let's Encrypt certificates anymore. OCSP stapling is a way for servers to include a signed OCSP response in the TLS handshake so that users keep their privacy and potential connection or performance issues while requesting to OCSP responders are prevented. The OCSP response is also signed by certificate authority so that clients can verify it using issuer certificate authority public key(usually intermediate certificate).
 
-It seems that the ecosystem is shifting towards short-lived certificates, CRLs or client-managed blocklists.
+It seems that the ecosystem is [shifting](https://www.feistyduck.com/newsletter/issue_121_the_slow_death_of_ocsp) towards short-lived certificates, CRLs or client-managed blocklists.
 
 </br>
 
@@ -153,7 +153,6 @@ class SecurityProviderInterceptor(
 
             Timber.e(e)
             throw IOException("Google Play services is out of date or disabled")
-
         } catch (e: GooglePlayServicesNotAvailableException) {
             Timber.e(e)
             throw IOException("Non-recoverable Google Play services error")
@@ -178,7 +177,7 @@ class SecurityProviderStateManager {
 
 ## Certificate Pinning
 
-Certificate pinning restricts the certificates for client's network configuration to a specified list of public keys so that any other certificate won't be accepted for tls handshakes. The downside of this method is clients have to be updated with the new public key when the certificate is renewed, otherwise connections will be blocked because tls handshake won't be successful. [While Android doesn't recommend certificate pinning, they say that multiple backup pins should be used to prevent connectivity issues if certificate pinning is used.](https://developer.android.com/privacy-and-security/security-ssl#Pinning)
+Certificate pinning restricts the certificates for client's network configuration to a specified list of public keys so that any other certificate won't be accepted for tls handshakes. The downside of this method is clients have to be updated with the new public key when the certificate is renewed, otherwise connections will be blocked because TLS handshake won't be successful. [While Android doesn't recommend certificate pinning, they say that multiple backup pins should be used to prevent connectivity issues if certificate pinning is used.](https://developer.android.com/privacy-and-security/security-ssl#Pinning)
 
 Other links for certificate pinning
 - https://developer.android.com/privacy-and-security/security-config#CertificatePinning
