@@ -61,6 +61,9 @@ sequenceDiagram
 #### Certificate
 Certificate message contains leaf and intermediate certificates and client verifies signature in leaf certificate using intermediate certificate's public key. Then client finds issuer root certificate of intermediate certificate in client's trust store and verifies signature in intermediate certificate using root certificate's public key. This verification is called chain of trust and it proves that the leaf certificate is connected to a trusted root certificate in the client’s trust store.
 
+#### Trustworthiness of Trust Store
+On Android 7 (api level 24) and higher, apps trust only **system** certificates by default. System certificates can not be altered if the system is not rooted. On Android 6 (api 23) and lower, all apps trust system certificates and user-added certificates by default. Default configurations can be seen [here](https://mas.owasp.org/MASTG/knowledge/android/MASVS-NETWORK/MASTG-KNOW-0014/#default-configurations). Apps [can be configured](https://developer.android.com/privacy-and-security/security-config#ConfigCustom) to trust user-added or define custom trust anchors if needed. If there is no specific reason to trust user-added certificates, it's better to restrict trust to system certificate authorities only, as trusting user-added certificates increases the risk of MITM attacks.
+
 #### CertificateVerify
 CertificateVerify is the signature of previous handshake transcript signed with leaf certificate private key. Client verifies this signature using leaf certificate's public key. This proves that the server is the true owner of the certificate and its private key.
 
@@ -88,7 +91,7 @@ OCSP simply involves asking a certificate's status(good or revoked?) to the cert
 
 Let's Encrypt [ended OCSP support](https://letsencrypt.org/2024/12/05/ending-ocsp) in 2025. As a result, OCSP-based mechanisms including OCSP stapling are no longer usable for Let's Encrypt certificates anymore. OCSP stapling is a way for servers to include a signed OCSP response in the TLS handshake so that users keep their privacy and potential connection or performance issues while requesting to OCSP responders are prevented. The OCSP response is also signed by certificate authority so that clients can verify it using issuer certificate authority public key(usually intermediate certificate).
 
-It seems that the ecosystem is [shifting](https://www.feistyduck.com/newsletter/issue_121_the_slow_death_of_ocsp) towards short-lived certificates, CRLs or client-managed blocklists.
+It seems that the ecosystem is [shifting](https://www.feistyduck.com/newsletter/issue_121_the_slow_death_of_ocsp) towards short-lived certificates, CRLs or client-managed blocklists. Still, if there is an OCSP response in TLS handshake, Android system [validates](https://developer.android.com/privacy-and-security/security-ssl#certificate-validation) it.
 
 </br>
 
@@ -224,3 +227,4 @@ Other links for certificate pinning
 - https://square.github.io/okhttp/features/interceptors/
 - https://github.com/square/okhttp/blob/master/okhttp/src/commonJvmAndroid/kotlin/okhttp3/Connection.kt
 - https://github.com/square/okhttp/blob/master/okhttp/src/commonJvmAndroid/kotlin/okhttp3/Interceptor.kt
+- https://news.ycombinator.com/item?id=16682063
