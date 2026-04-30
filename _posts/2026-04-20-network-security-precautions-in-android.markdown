@@ -113,6 +113,8 @@ Android doesn't directly call it CRL check but they say that they use a combinat
 ## Updating GMS security provider
 Android [recommends](https://developer.android.com/privacy-and-security/security-gms-provider) ensuring security provider updates against SSL exploits. The security provider should be patched [before any network connection](https://mas.owasp.org/MASTG/best-practices/MASTG-BEST-0020/).
 
+</br>
+
 ## Certificate Pinning
 
 Certificate pinning restricts the certificates for client's network configuration to a specified list of public keys so that any other certificate won't be accepted for tls handshakes. The downside of this method is clients have to be updated with the new public key when the certificate is renewed, otherwise connections will be blocked because TLS handshake won't be successful. [While Android doesn't recommend certificate pinning, they say that multiple backup pins should be used to prevent connectivity issues if certificate pinning is used.](https://developer.android.com/privacy-and-security/security-ssl#Pinning)
