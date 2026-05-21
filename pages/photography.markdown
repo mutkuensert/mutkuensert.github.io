@@ -9,6 +9,68 @@ All photographs are my original work and may not be used, reproduced, or distrib
 
 Click on photographes for full screen paginated view.
 
+
+## Antalya, 2026
+Nikon D7200
+
+<div class="swiper" data-my-swiper>
+    <div class="swiper-wrapper pswp-gallery" data-gallery>
+        <div class="swiper-slide">
+            <a href="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4110EDW.webp" target="_blank">
+                <img src="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4110EDW.webp" alt="Image" loading="lazy" />
+            </a>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide">
+            <a href="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4196EDW.webp" target="_blank">
+                <img src="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4196EDW.webp" alt="Image" loading="lazy" />
+            </a>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide">
+            <a href="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4011EDW.webp" target="_blank">
+                <img src="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4011EDW.webp" alt="Image" loading="lazy" />
+            </a>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide">
+            <a href="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4495EDW.webp" target="_blank">
+                <img src="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4495EDW.webp" alt="Image" loading="lazy" />
+            </a>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide">
+            <a href="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4511EDW.webp" target="_blank">
+                <img src="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4511EDW.webp" alt="Image" loading="lazy" />
+            </a>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide">
+            <a href="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4224EDW.webp" target="_blank">
+                <img src="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4224EDW.webp" alt="Image" loading="lazy" />
+            </a>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide">
+            <a href="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4336EDW.webp" target="_blank">
+                <img src="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4336EDW.webp" alt="Image" loading="lazy" />
+            </a>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide">
+            <a href="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4356EDW.webp" target="_blank">
+                <img src="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4356EDW.webp" alt="Image" loading="lazy" />
+            </a>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+</br>
+
 ## Konya, 2026
 Nikon D7200
 
