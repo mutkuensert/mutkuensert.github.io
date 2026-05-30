@@ -1,4 +1,4 @@
-# Privacy Policy
+# FilmCan Android Application Privacy Policy
 
 Last updated: May 30, 2026
 
