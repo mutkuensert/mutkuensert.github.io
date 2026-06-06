@@ -31,6 +31,7 @@ header_pages:
   - pages/photography.markdown
   - pages/about.markdown
 show_excerpts: true
+google_analytics: G-S9WKSF4BRE
 
 # Build settings
 theme: minima
