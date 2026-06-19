@@ -44,7 +44,7 @@ data class MovieDetailUiModel(
 }
 ```
 
-The downside of this structure is when you import these nested classes in Android Studio, it will automatically import the classes like this:
+Android Studio will automatically import nested classes like this:
 
 ```kotlin
 import feature.movie.domain.model.Person
@@ -59,7 +59,8 @@ fun Person.toUiModel(): MovieDetailUiModel.PersonUiModel {
 }
 ```
 
-But we can add the import by hand:
+But we can add the import of the nested class just by moving the cursor over PersonUiModel in the code and then pressing Alt(or option for macOS) + Enter. 
+A suggestion window will appear to import:
 
 ```kotlin
 import feature.movie.domain.model.Person
