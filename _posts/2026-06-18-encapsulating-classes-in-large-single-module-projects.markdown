@@ -47,6 +47,8 @@ data class MovieDetailUiModel(
 The downside of this structure is when you import these nested classes in Android Studio, it will automatically import the classes like this:
 
 ```kotlin
+import feature.movie.domain.model.Person
+
 fun Person.toUiModel(): MovieDetailUiModel.PersonUiModel {
     return MovieDetailUiModel.PersonUiModel(
         id = id,
