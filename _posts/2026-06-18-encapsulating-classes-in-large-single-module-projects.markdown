@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Encapsulating classes in single module big Android projects"
-date:   2026-06-18 17:20:00 +0300
+title:  "Encapsulating classes in large single module Android projects"
+date:   2026-06-19 07:00:00 +0300
 categories: android
 excerpt: ""
 ---
 
-The problem is that name similarities and confusion occur when there are lots of services, screens and classes in a big project within a single module. The right way to separate concerns is a multi module structure for big projects but teams may not have time to convert their projects. To achieve an encapsulation for classes, I’m using [nested classes](https://kotlinlang.org/docs/nested-classes.html). Let me show a simple class:
+The problem is that name similarities and confusion occur when there are lots of services, screens and classes in a large project within a single module. The right way to separate concerns is a multi module structure but teams may not have time to convert their projects. To achieve an encapsulation for classes, I’m using [nested classes](https://kotlinlang.org/docs/nested-classes.html). For example:
 
 ```kotlin
 data class MovieDetailUiModel(
@@ -73,4 +73,4 @@ fun Person.toUiModel(): PersonUiModel {
 }
 ```
 
-Thus, when there is another PersonUiModel with different contents in another screen, it will be easy to distinguish the classes because we will know where they belong by looking at their outer classes.
+Thus, when another screen has a `PersonUiModel` with different contents, it will be easy to distinguish the classes because their outer classes indicate where they belong. This approach can also be used for response classes, etc.
