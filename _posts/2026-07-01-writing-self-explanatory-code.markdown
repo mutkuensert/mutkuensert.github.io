@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Writing Self-Explanatory Code"
-date:   2026-07-01 19:00:00 +0300
+date:   2026-07-01 07:00:00 +0300
 categories: android
 excerpt: ""
 ---
