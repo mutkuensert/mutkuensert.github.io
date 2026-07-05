@@ -1,0 +1,24 @@
+{%- assign photo = site.data.photo_of_day -%}
+{%- if photo and photo.image -%}
+<aside class="photo-of-day" aria-labelledby="photo-of-day-title">
+  <div class="photo-of-day__eyebrow" id="photo-of-day-title">Photo of the day</div>
+  <div class="photo-of-day__gallery pswp-gallery" data-gallery>
+    <a class="photo-of-day__image-link" href="{{ photo.image | relative_url }}" aria-label="Open photo viewer">
+      <img
+        class="photo-of-day__image"
+        src="{{ photo.image | relative_url }}"
+        alt="{{ photo.alt | default: photo.title | escape }}"
+        loading="lazy">
+    </a>
+  </div>
+  <div class="photo-of-day__body">
+    {%- if photo.title -%}
+      <div class="photo-of-day__title">{{ photo.title }}</div>
+    {%- endif -%}
+    {%- if photo.description -%}
+      <div class="photo-of-day__meta">{{ photo.description }}</div>
+    {%- endif -%}
+    <a class="photo-of-day__link" href="{{ "/photography/" | relative_url }}">Photography</a>
+  </div>
+</aside>
+{%- endif -%}
