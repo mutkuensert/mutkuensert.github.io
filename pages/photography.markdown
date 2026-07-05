@@ -22,6 +22,12 @@ Nikon D7200
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         <div class="swiper-slide">
+            <a href="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4307W.webp" target="_blank">
+                <img src="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4307W.webp" alt="Image" loading="lazy" />
+            </a>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide">
             <a href="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4196EDW.webp" target="_blank">
                 <img src="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4196EDW.webp" alt="Image" loading="lazy" />
             </a>
@@ -63,6 +69,12 @@ Nikon D7200
             </a>
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
+        <div class="swiper-slide">
+            <a href="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4543EDW.webp" target="_blank">
+                <img src="../../../assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4543EDW.webp" alt="Image" loading="lazy" />
+            </a>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>        
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
