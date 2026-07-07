@@ -11,7 +11,7 @@ $content-width: 960px;
 }
 
 .photo-collection {
-  margin-top: 48px;
+  margin-top: 24px;
 }
 
 .photo-collection__header h2 {
@@ -23,8 +23,8 @@ $content-width: 960px;
   color: #aab0b7;
 }
 
-.photo-set__header {
-  margin: 28px 0 12px;
+.photo-set + .photo-set {
+  margin-top: 24px;
 }
 
 .photo-gallery {

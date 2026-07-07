@@ -1,17 +1,29 @@
 collections:
   - title: "2026, Antalya"
     sets:
-      - title: "Nikon D7200"
+      - title: >-
+          <a href="https://maps.app.goo.gl/jQPSAL1SHTqSSfaX9" target="_blank">Kaleiçi Yacht Harbour</a>
         photos:
           - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4110ED2W.webp"
+      - title: >-
+          <a href="https://maps.app.goo.gl/ZfYvqmf5jUhKfvKG8" target="_blank">Side Ancient Harbour</a>
+        photos:
           - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4307W.webp"
           - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4196EDW.webp"
-          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4011EDW.webp"
-          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4495EDW.webp"
-          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4511EDW.webp"
           - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4224EDW.webp"
           - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4336EDW.webp"
           - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4356EDW.webp"
+      - title: "The Land of Legends"
+        photos:
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4495EDW.webp"
+            description: >-
+              This is from the Musical Boat Parade at The Land of Legends. 
+              They hold this show regularly, and it's free to watch. They also host other free events. 
+              You can check the schedule on their <a href="https://www.thelandoflegends.com/" target="_blank">website</a>.
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4511EDW.webp"
+      - title: "Seydişehir road"
+        photos:
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4011EDW.webp"
           - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4543EDW.webp"
 
   - title: "2026, Konya"
@@ -21,8 +33,7 @@ collections:
           - image: "assets/image/2026_konya_selcuklu_seyir_tepesi/DSC_3896W.webp"
             title: "Selçuklu Seyir Tepesi, Konya"
             description: >-
-              A photo I took in the spring of 2026. Every afternoon, a shepherd would walk his sheep over these
-              <a href="https://maps.app.goo.gl/FRjMLbe2HxmvFUUn8" target="_blank">hills</a>.
+              Every afternoon, a shepherd would walk his sheep over these <a href="https://maps.app.goo.gl/FRjMLbe2HxmvFUUn8" target="_blank">hills</a>.
           - image: "assets/image/2026_konya_selcuklu_seyir_tepesi/DSC_3845EDW.webp"
 
   - title: "2020, Side"
