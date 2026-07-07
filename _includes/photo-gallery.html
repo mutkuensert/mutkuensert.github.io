@@ -1,0 +1,80 @@
+{%- assign collections = site.data.photography.collections -%}
+
+{%- for collection in collections -%}
+  {%- assign sets = collection.sets -%}
+  {%- assign set_count = sets | size -%}
+
+  <section class="photo-collection">
+    <header class="photo-collection__header">
+      {%- if set_count == 1 -%}
+        {%- assign only_set = sets | first -%}
+        <h2>{{ collection.title }}</h2>
+        {%- if only_set.title -%}
+          <p class="photo-set-title">{{ only_set.title }}</p>
+        {%- endif -%}
+      {%- else -%}
+        <h2>{{ collection.title }}</h2>
+      {%- endif -%}
+
+    </header>
+
+    {%- for set in sets -%}
+      {%- if set_count > 1 -%}
+        <header class="photo-set__header">
+          <p class="photo-set-title">{{ set.title }}</p>
+        </header>
+      {%- endif -%}
+
+      {%- assign has_gallery_caption = false -%}
+      {%- for photo in set.photos -%}
+        {%- if photo.title or photo.description -%}
+          {%- assign has_gallery_caption = true -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      <div class="swiper photo-gallery" data-my-swiper>
+        <div class="swiper-wrapper pswp-gallery" data-gallery>
+          {%- for photo in set.photos -%}
+            <div class="swiper-slide">
+              <figure class="photo-slide">
+                <a class="photo-slide__image-link" href="{{ photo.image | relative_url }}" target="_blank" data-pswp-link>
+                  <img
+                    class="photo-slide__image"
+                    src="{{ photo.image | relative_url }}"
+                    alt="{{ photo.alt | default: photo.title | default: collection.title | escape }}"
+                    loading="lazy" />
+                </a>
+              </figure>
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            </div>
+          {%- endfor -%}
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      {%- if has_gallery_caption -%}
+        <div class="photo-gallery-caption" data-photo-gallery-caption aria-live="polite" hidden>
+          {%- for photo in set.photos -%}
+            {%- assign has_caption = false -%}
+            {%- if photo.title or photo.description -%}
+              {%- assign has_caption = true -%}
+            {%- endif -%}
+
+            <div class="photo-gallery-caption__item" data-photo-caption-index="{{ forloop.index0 }}" {% unless has_caption %}hidden{% endunless %}>
+              {%- if photo.title -%}
+                <strong class="photo-gallery-caption__title">{{ photo.title }}</strong>
+              {%- endif -%}
+              {%- if photo.description -%}
+                <div class="photo-gallery-caption__description">
+                  <p>{{ photo.description }}</p>
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </section>
+{%- endfor -%}

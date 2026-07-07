@@ -1,0 +1,99 @@
+collections:
+  - title: "2026, Antalya"
+    sets:
+      - title: "Nikon D7200"
+        photos:
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4110ED2W.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4307W.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4196EDW.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4011EDW.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4495EDW.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4511EDW.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4224EDW.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4336EDW.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4356EDW.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4543EDW.webp"
+
+  - title: "2026, Konya"
+    sets:
+      - title: "Nikon D7200"
+        photos:
+          - image: "assets/image/2026_konya_selcuklu_seyir_tepesi/DSC_3896W.webp"
+            title: "Selçuklu Seyir Tepesi, Konya"
+            description: >-
+              A photo I took in the spring of 2026. Every afternoon, a shepherd would walk his sheep over these
+              <a href="https://maps.app.goo.gl/FRjMLbe2HxmvFUUn8" target="_blank">hills</a>.
+          - image: "assets/image/2026_konya_selcuklu_seyir_tepesi/DSC_3845EDW.webp"
+
+  - title: "2020, Side"
+    sets:
+      - title: "Nikon D7200"
+        photos:
+          - image: "assets/image/2020_side/DSC_2355EDW.webp"
+          - image: "assets/image/2020_side/DSC_2329W.webp"
+
+  - title: "2019, Muğla"
+    sets:
+      - title: "Nikon D7200"
+        photos:
+          - image: "assets/image/2019_mugla/DSC_0768EDW.webp"
+          - image: "assets/image/2019_mugla/DSC_0797EDW.webp"
+          - image: "assets/image/2019_mugla/DSC_0810EDW.webp"
+          - image: "assets/image/2019_mugla/DSC_0813EDW.webp"
+          - image: "assets/image/2019_mugla/DSC_0833W.webp"
+          - image: "assets/image/2019_mugla/DSC_0764EDW.webp"
+
+  - title: "2019, Kaş"
+    sets:
+      - title: "Nikon D7200"
+        photos:
+          - image: "assets/image/2019_kas/DSC_0743EDW.webp"
+          - image: "assets/image/2019_kas/DSC_0744EDW.webp"
+
+  - title: "2019, Alanya"
+    sets:
+      - title: "Nikon D7200"
+        photos:
+          - image: "assets/image/2019_alanya/DSC_0618EDW.webp"
+
+  - title: "2019, Bursa"
+    sets:
+      - title: "Nikon D7200"
+        photos:
+          - image: "assets/image/2019_bursa/DSC_0407W.webp"
+          - image: "assets/image/2019_bursa/DSC_0412EDW.webp"
+          - image: "assets/image/2019_bursa/DSC_0421EDW.webp"
+          - image: "assets/image/2019_bursa/DSC_0437EDW.webp"
+          - image: "assets/image/2019_bursa/DSC_0451EDW.webp"
+
+  - title: "2018, Kapadokya"
+    sets:
+      - title: "Olympus E-510"
+        photos:
+          - image: "assets/image/2018_kapadokya/P7215847EDW.webp"
+          - image: "assets/image/2018_kapadokya/P7215864EDW.webp"
+
+  - title: "Beyşehir"
+    sets:
+      - title: "2026, Nikon D7200"
+        photos:
+          - image: "assets/image/2026_beysehir/DSC_3705W.webp"
+      - title: "2019, Nikon D7200"
+        photos:
+          - image: "assets/image/2019_beysehir/DSC_1095EDW.webp"
+          - image: "assets/image/2019_beysehir/DSC_1097ED2W.webp"
+          - image: "assets/image/2019_beysehir/DSC_1122EDW.webp"
+      - title: "2016, Olympus E-510"
+        photos:
+          - image: "assets/image/2016_beysehir/P2081871ED2W.webp"
+          - image: "assets/image/2016_beysehir/P2081864EDW.webp"
+          - image: "assets/image/2016_beysehir/P2081957EDW.webp"
+          - image: "assets/image/2016_beysehir/P2082189EDW.webp"
+          - image: "assets/image/2016_beysehir/P2082201EDW.webp"
+
+  - title: "Cat in the university"
+    sets:
+      - title: "2014, Olympus E-510"
+        photos:
+          - image: "assets/image/2014_cat_in_university/PA268202EDW.webp"
+          - image: "assets/image/2014_cat_in_university/PA268248EDW.webp"

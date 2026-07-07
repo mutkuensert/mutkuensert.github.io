@@ -3,7 +3,7 @@
 <aside class="photo-of-day" aria-labelledby="photo-of-day-title">
   <div class="photo-of-day__eyebrow" id="photo-of-day-title">Photo of the day</div>
   <div class="photo-of-day__gallery pswp-gallery" data-gallery>
-    <a class="photo-of-day__image-link" href="{{ photo.image | relative_url }}" aria-label="Open photo viewer">
+    <a class="photo-of-day__image-link" href="{{ photo.image | relative_url }}" aria-label="Open photo viewer" data-pswp-link>
       <img
         class="photo-of-day__image"
         src="{{ photo.image | relative_url }}"

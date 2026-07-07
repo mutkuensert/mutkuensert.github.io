@@ -47,20 +47,43 @@
 
   <script>
     document.querySelectorAll("[data-my-swiper]").forEach((container) => {
+      const caption = container.nextElementSibling && container.nextElementSibling.matches("[data-photo-gallery-caption]")
+        ? container.nextElementSibling
+        : null;
+
+      const syncCaption = (swiper) => {
+        if (!caption) {
+          return;
+        }
+
+        const activeIndex = swiper.activeIndex;
+        const activeCaption = caption.querySelector(`[data-photo-caption-index="${activeIndex}"]`);
+
+        caption.querySelectorAll("[data-photo-caption-index]").forEach((item) => {
+          item.hidden = item !== activeCaption;
+        });
+
+        caption.hidden = !activeCaption || activeCaption.textContent.trim() === "";
+      };
+
       var swiper = new Swiper(container, {
         autoHeight: true,
         pagination: {
-          el: ".swiper-pagination",
+          el: container.querySelector(".swiper-pagination"),
           type: "fraction",
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: container.querySelector(".swiper-button-next"),
+          prevEl: container.querySelector(".swiper-button-prev"),
+        },
+        on: {
+          init: syncCaption,
+          slideChange: syncCaption,
         },
       });
     });
 
-    document.querySelectorAll('[data-gallery] a').forEach(link => {
+    document.querySelectorAll('[data-gallery] [data-pswp-link]').forEach(link => {
       const img = new Image();
       img.onload = () => {
         link.dataset.pswpWidth = img.width;
@@ -71,7 +94,7 @@
     document.querySelectorAll('[data-gallery]').forEach((galleryEl) => {
       const lightbox = new PhotoSwipeLightbox({
         gallery: galleryEl,
-        children: 'a',
+        children: '[data-pswp-link]',
         pswpModule: PhotoSwipe
       });
 
