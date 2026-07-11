@@ -1,5 +1,17 @@
+pages:
+  - slug: "2026"
+    title: "2026"
+    url: "/photography/"
+  - slug: "2019-2020"
+    title: "2019-2020"
+    url: "/photography/2019-2020/"
+  - slug: "2014-2018"
+    title: "2014-2018"
+    url: "/photography/2014-2018/"
+
 collections:
   - title: "2026, Antalya"
+    page: "2026"
     sets:
       - title: >-
           <a href="https://maps.app.goo.gl/jQPSAL1SHTqSSfaX9" target="_blank">Kaleiçi Yacht Harbour</a>
@@ -27,6 +39,7 @@ collections:
           - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4543EDW.webp"
 
   - title: "2026, Konya"
+    page: "2026"
     sets:
       - title: "Nikon D7200"
         photos:
@@ -35,8 +48,12 @@ collections:
             description: >-
               Every afternoon, a shepherd would walk his sheep over these <a href="https://maps.app.goo.gl/FRjMLbe2HxmvFUUn8" target="_blank">hills</a>.
           - image: "assets/image/2026_konya_selcuklu_seyir_tepesi/DSC_3845EDW.webp"
+      - title: "Beyşehir"
+        photos:
+          - image: "assets/image/2026_beysehir/DSC_3705W.webp"
 
   - title: "2020, Side"
+    page: "2019-2020"
     sets:
       - title: "Nikon D7200"
         photos:
@@ -44,6 +61,7 @@ collections:
           - image: "assets/image/2020_side/DSC_2329W.webp"
 
   - title: "2019, Muğla"
+    page: "2019-2020"
     sets:
       - title: "Nikon D7200"
         photos:
@@ -55,6 +73,7 @@ collections:
           - image: "assets/image/2019_mugla/DSC_0764EDW.webp"
 
   - title: "2019, Kaş"
+    page: "2019-2020"
     sets:
       - title: "Nikon D7200"
         photos:
@@ -62,12 +81,14 @@ collections:
           - image: "assets/image/2019_kas/DSC_0744EDW.webp"
 
   - title: "2019, Alanya"
+    page: "2019-2020"
     sets:
       - title: "Nikon D7200"
         photos:
           - image: "assets/image/2019_alanya/DSC_0618EDW.webp"
 
   - title: "2019, Bursa"
+    page: "2019-2020"
     sets:
       - title: "Nikon D7200"
         photos:
@@ -77,7 +98,17 @@ collections:
           - image: "assets/image/2019_bursa/DSC_0437EDW.webp"
           - image: "assets/image/2019_bursa/DSC_0451EDW.webp"
 
+  - title: "Beyşehir"
+    page: "2019-2020"
+    sets:
+      - title: "2019, Nikon D7200"
+        photos:
+          - image: "assets/image/2019_beysehir/DSC_1095EDW.webp"
+          - image: "assets/image/2019_beysehir/DSC_1097ED2W.webp"
+          - image: "assets/image/2019_beysehir/DSC_1122EDW.webp"
+
   - title: "2018, Kapadokya"
+    page: "2014-2018"
     sets:
       - title: "Olympus E-510"
         photos:
@@ -85,15 +116,8 @@ collections:
           - image: "assets/image/2018_kapadokya/P7215864EDW.webp"
 
   - title: "Beyşehir"
+    page: "2014-2018"
     sets:
-      - title: "2026, Nikon D7200"
-        photos:
-          - image: "assets/image/2026_beysehir/DSC_3705W.webp"
-      - title: "2019, Nikon D7200"
-        photos:
-          - image: "assets/image/2019_beysehir/DSC_1095EDW.webp"
-          - image: "assets/image/2019_beysehir/DSC_1097ED2W.webp"
-          - image: "assets/image/2019_beysehir/DSC_1122EDW.webp"
       - title: "2016, Olympus E-510"
         photos:
           - image: "assets/image/2016_beysehir/P2081871ED2W.webp"
@@ -103,6 +127,7 @@ collections:
           - image: "assets/image/2016_beysehir/P2082201EDW.webp"
 
   - title: "Cat in the university"
+    page: "2014-2018"
     sets:
       - title: "2014, Olympus E-510"
         photos:

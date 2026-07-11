@@ -14,6 +14,42 @@ $content-width: 960px;
   margin-top: 24px;
 }
 
+.photo-page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0 8px;
+}
+
+.photo-page-nav__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid rgba(130, 130, 130, 0.35);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  color: #d9dbde;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.photo-page-nav__link:visited {
+  color: #d9dbde;
+}
+
+.photo-page-nav__link:hover {
+  border-color: rgba(217, 219, 222, 0.65);
+  text-decoration: none;
+}
+
+.photo-page-nav__link--active,
+.photo-page-nav__link--active:visited {
+  border-color: #d9dbde;
+  background: #d9dbde;
+  color: #090f16;
+}
+
 .photo-collection__header h2 {
   margin-bottom: 4px;
 }

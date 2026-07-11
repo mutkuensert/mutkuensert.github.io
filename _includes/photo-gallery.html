@@ -1,6 +1,27 @@
-{%- assign collections = site.data.photography.collections -%}
+{%- assign photography = site.data.photography -%}
+{%- assign gallery_pages = photography.pages -%}
+{%- assign default_gallery_page = gallery_pages.first.slug -%}
+{%- assign current_gallery_page = page.photography_page | default: default_gallery_page -%}
+{%- assign collections = photography.collections -%}
 
+{%- if gallery_pages -%}
+  <nav class="photo-page-nav" aria-label="Photography pages">
+    {%- for gallery_page in gallery_pages -%}
+      <a
+        class="photo-page-nav__link{% if gallery_page.slug == current_gallery_page %} photo-page-nav__link--active{% endif %}"
+        href="{{ gallery_page.url | relative_url }}"
+        {% if gallery_page.slug == current_gallery_page %}aria-current="page"{% endif %}>
+        {{ gallery_page.title }}
+      </a>
+    {%- endfor -%}
+  </nav>
+{%- endif -%}
+
+{%- assign rendered_collection_count = 0 -%}
 {%- for collection in collections -%}
+  {%- assign collection_page = collection.page | default: default_gallery_page -%}
+  {%- if gallery_pages == nil or collection_page == current_gallery_page -%}
+  {%- assign rendered_collection_count = rendered_collection_count | plus: 1 -%}
   {%- assign sets = collection.sets -%}
 
   <section class="photo-collection">
@@ -67,4 +88,9 @@
       </div>
     {%- endfor -%}
   </section>
+  {%- endif -%}
 {%- endfor -%}
+
+{%- if rendered_collection_count == 0 -%}
+  <p>No photographs were found for this page.</p>
+{%- endif -%}
