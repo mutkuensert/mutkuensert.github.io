@@ -28,6 +28,23 @@ collections:
           - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4224EDW.webp"
           - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4336EDW.webp"
           - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4356EDW.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4941W.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4642EDW.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4649EDW.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4690EDW.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4745EDW.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4746EDW.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4761EDW.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4779EDW.webp"
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4782EDW.webp"
+      - title: "Konyaaltı Varyant"
+        photos:
+          - image: "assets/image/2026_antalya_konyaaltı_varyant/DSC_5038EDW.webp"
+          - image: "assets/image/2026_antalya_konyaaltı_varyant/DSC_5062EDW.webp"
+          - image: "assets/image/2026_antalya_konyaaltı_varyant/DSC_5068EDW.webp"
+          - image: "assets/image/2026_antalya_konyaaltı_varyant/DSC_4813W.webp"
+          - image: "assets/image/2026_antalya_konyaaltı_varyant/DSC_4881EDW.webp"
+
       - title: "The Land of Legends"
         photos:
           - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_4495EDW.webp"
@@ -44,7 +61,7 @@ collections:
   - title: "2026, Konya"
     page: "2026"
     sets:
-      - title: "Nikon D7200"
+      - title: "Selçuklu Seyir Tepesi"
         photos:
           - image: "assets/image/2026_konya_selcuklu_seyir_tepesi/DSC_3896W.webp"
             title: "Selçuklu Seyir Tepesi, Konya"
