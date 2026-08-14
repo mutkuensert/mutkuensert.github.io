@@ -10,6 +10,12 @@ pages:
     url: "/photography/2014-2018/"
 
 collections:
+  - title: "2026, Konya"
+    page: "2026"
+    sets:
+      - title: "Perseid Meteor Shower"
+        photos:
+          - image: "assets/image/2026_perseid_meteor_shower/DSC_5395EDW.webp"
   - title: "2026, Antalya"
     page: "2026"
     sets:
