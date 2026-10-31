@@ -125,7 +125,7 @@ The picture:
 The output:
 
 <div style="text-align: center;">
-<video width="450" controls autoplay loop muted>
+<video style="width: 100%; max-width: 450px; height: auto;" controls autoplay loop muted>
   <source src="/assets/image/2026_parallax_video/video_5712_default_model.mp4" type="video/mp4">
   Your browser doesnt support html video tag.
 </video>
@@ -148,7 +148,7 @@ if __name__ == "__main__":
 The result is similar:
 
 <div style="text-align: center;">
-<video width="450" controls autoplay loop muted>
+<video style="width: 100%; max-width: 450px; height: auto;" controls autoplay loop muted>
   <source src="/assets/image/2026_parallax_video/video_5712_default_large_model.mp4" type="video/mp4">
   Your browser doesnt support html video tag.
 </video>
@@ -268,7 +268,7 @@ if __name__ == "__main__":
 
 The result is not so good:
 <div style="text-align: center;">
-<video width="450" controls autoplay loop muted>
+<video style="width: 100%; max-width: 450px; height: auto;" controls autoplay loop muted>
   <source src="/assets/image/2026_parallax_video/DSC_5712_depth_anything_3_da3mono_large_video.mp4" type="video/mp4">
   Your browser doesnt support html video tag.
 </video>
@@ -443,7 +443,7 @@ Then, using this map, I created a new video with depthflow and the
 result is actually great.
 
 <div style="text-align: center;">
-<video width="450" controls autoplay loop muted>
+<video style="width: 100%; max-width: 450px; height: auto;" controls autoplay loop muted>
   <source src="/assets/image/2026_parallax_video/DSC_5712_moge_video.mp4" type="video/mp4">
   Your browser doesnt support html video tag.
 </video>
