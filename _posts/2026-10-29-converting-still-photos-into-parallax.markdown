@@ -64,7 +64,14 @@ My system was using an open source nouveau driver. To check the available driver
 ubuntu-drivers devices
 ```
 
-I installed the recommended version and restarted the pc but OpenGL was still using amd processor. To fix it, I used Nvidia Prime Render Offload.
+I installed the recommended version and restarted the pc:
+
+```bash
+sudo apt update
+sudo apt install nvidia-driver-595-open
+```
+
+But OpenGL was still using amd processor. To fix it, use Nvidia Prime Render Offload.
 
 ```bash
 __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia depthflow main
