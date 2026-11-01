@@ -10,12 +10,34 @@ pages:
     url: "/photography/2014-2018/"
 
 collections:
+  - title: "2026, Alanya"
+    page: "2026"
+    sets:
+      - title: "Koru Plajı"
+        photos:
+          - image: "assets/image/2026_alanya_koru/DSC_5773S.JPG"
+          - image: "assets/image/2026_alanya_koru/DSC_5660ES.JPG"
+          - image: "assets/image/2026_alanya_koru/DSC_5712S.JPG"
+          - image: "assets/image/2026_alanya_koru/DSC_5876S.JPG"
+
+  - title: "2026, Datça"
+    page: "2026"
+    sets:
+      - title: ""
+        photos:
+          - image: "assets/image/2026_datça/DSC_5445ES.webp"
+          - image: "assets/image/2026_datça/DSC_5447S.webp"
+          - image: "assets/image/2026_datça/DSC_5485S.webp"
+          - image: "assets/image/2026_datça/DSC_5502S.webp"
+          - image: "assets/image/2026_datça/DSC_5547ES.webp"
+          - image: "assets/image/2026_datça/DSC_5568S.webp"
   - title: "2026, Konya"
     page: "2026"
     sets:
       - title: "Perseid Meteor Shower"
         photos:
           - image: "assets/image/2026_perseid_meteor_shower/DSC_5395EDW.webp"
+
   - title: "2026, Antalya"
     page: "2026"
     sets:
