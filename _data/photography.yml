@@ -17,6 +17,7 @@ collections:
         photos:
           - image: "assets/image/2026_alanya_koru/DSC_5773S.JPG"
           - image: "assets/image/2026_alanya_koru/DSC_5660ES.JPG"
+          - image: "assets/image/2026_alanya_koru/DSC_5786ES.webp"
           - image: "assets/image/2026_alanya_koru/DSC_5712S.JPG"
           - image: "assets/image/2026_alanya_koru/DSC_5876S.JPG"
 
@@ -48,6 +49,7 @@ collections:
       - title: >-
           <a href="https://maps.app.goo.gl/ZfYvqmf5jUhKfvKG8" target="_blank">Side Ancient Harbour</a>
         photos:
+          - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_5604S.JPG"
           - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_5141W.webp"
           - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_5190EDW.webp"
           - image: "assets/image/2026_antalya_kaleici_side_landoflegends/DSC_5172W.webp"
