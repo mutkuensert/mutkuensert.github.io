@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Converting still photos into Parallax Videos with DepthFlow"
+title:  "Converting still photos into Parallax Videos with DepthFlow and AI Models"
 date:   2026-10-31 19:00:00 +0300
 categories: general
 excerpt: "Exploring depth estimation, 3d geometry estimation and problems I encountered while creating parallax videos"
