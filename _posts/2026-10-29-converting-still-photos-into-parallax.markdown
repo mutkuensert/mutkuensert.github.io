@@ -14,7 +14,7 @@ I also wanted to do these processes locally on my computer. Then, I found [Depth
 
 First of all, I've done all these work on Linux Mint. DepthFlow can be [installed](https://depth.tremeschin.com/get/pypi/#pip) using pip. 
 
-First, create a directory, then I create and activate a virtual environment:
+First, create a directory, then create and activate a virtual environment:
 
 ```bash
 python3 -m venv .venv
@@ -183,7 +183,7 @@ During an earlier attempt, I encountered package configuration issues. Later, wh
 ModuleNotFoundError: No module named 'addict'
 ```
 
-I resolved that particular dependency error with:
+Fix the error by installing the dependency:
 
 ```bash
 python -m pip install addict
